@@ -1,0 +1,153 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+   
+  } 
+
+  .card-img-custom {
+    width: 100%;
+    height: 200px; /* or whatever fixed height you desire */
+    object-fit: cover; /* this will make sure the aspect ratio of the images is maintained */
+  }
+  
+
+  .abc{
+    background-color: #FFFBF5;
+  }
+
+  .heading {
+    font-size: 56px;
+    color: #080808;
+    margin-bottom: 2rem;
+    font-family: 'Sans-serif';
+  }
+
+  .form-group {
+    font-family: 'Times New Roman', serif;
+  }
+
+  .login-container {
+    background: #FFFFFF;
+    padding: 2rem;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0px 8px 16px 0px rgba(41, 7, 7, 0.2);
+  }
+  
+  .register-container {
+    background: #FFFFFF;
+    padding: 2rem;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0px 8px 16px 0px rgba(41, 7, 7, 0.2);
+  }
+  
+  .form-control {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    box-sizing: border-box;
+  }
+  
+  .form-label {
+    margin-left: 0.5rem;
+    font-size: 0.875rem;
+    color: #333;
+  }
+  
+  .btn-primary {
+    background-color: #007bff;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+  }
+  
+  .btn-link {
+    border: none;
+    background: transparent;
+  }
+  
+  .btn-floating {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .fab {
+    font-size: 1rem;
+  }
+  
+  .social-buttons {
+    display: flex;
+    justify-content: center;
+  }
+
+  /* ... Other styles ... */
+
+.form-group {
+    position: relative;
+    margin-bottom: 20px;
+  }
+  
+  .form-control {
+    font-size: 16px;
+    padding: 12px;
+    width: 100%;
+  }
+  
+  .form-label {
+    position: absolute;
+    left: 12px;
+    top: 14px;
+    font-size: 16px;
+    color: #777;
+    transition: 0.2s;
+    pointer-events: none;
+  }
+  
+  .form-control:focus + .form-label,
+  .form-control:valid + .form-label {
+    top: -25px;
+    left: 8px;
+    font-size: 15px;
+    color: #352F44;
+  }
+
+  /* ... other styles ... */
+
+.form-group {
+    position: relative;
+    margin-bottom: 2rem;
+  }
+  
+  .form-control {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+  }
+  
+  .form-label {
+    position: absolute;
+    left: 12px;
+    top: 14px;
+    color: #777;
+    transition: top 0.2s, font-size 0.2s, color 0.2s;
+    pointer-events: none;
+  }
+  
+  .focused {
+    top: -10px;
+    font-size: 12px;
+    color: #007bff;
+  }
+
+  
+  
+  
