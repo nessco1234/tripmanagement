@@ -122,8 +122,9 @@ const LoginForm = () => {
             <button type="button" className="btn btn-primary btn-block mb-4" onClick={handleLogin}>Sign in</button>
             </div>
             <div className="text-center">
-              <p>Not a member? <a href="#!">Register</a></p>
-            </div>
+            <p>Not a member? <a href="#!" onClick={() => navigate('/registerForm')}>Register</a></p>
+          </div>
+
           </form>
         </div>
       </div>

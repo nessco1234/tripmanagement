@@ -73,6 +73,10 @@ const RegisterForm = () => {
             <div className="text-center">
               <button type="button" className="btn btn-primary btn-block mb-4" onClick={handleRegister}>Register</button>
             </div>
+
+            <div className="text-center">
+            <p>Already a member? <a href="#!" onClick={() => navigate('/')}>Login</a></p>
+          </div>
           </form>
         </div>
       </div>
