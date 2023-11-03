@@ -12,46 +12,82 @@
     object-fit: cover; /* this will make sure the aspect ratio of the images is maintained */
   }
   
+  .small-text {
+    font-size: 14px;
+  }
+  
 
-  .abc{
-    background-color: #FFFBF5;
+  .abc{    
+    background-color: #eeeeee;
   }
 
   .heading {
-    font-size: 56px;
+    font-size: 40px;
     color: #080808;
     margin-bottom: 2rem;
-    font-family: 'Sans-serif';
+    font-family: 'Poppins', sans-serif !important;
+    text-align: center;
+    padding-bottom: 1rem;
   }
 
-  .form-group {
+  .heading1 {
+    font-size: 20px;
+    color: #080808;
+    /* margin-bottom: 2rem; */
+    font-family: 'Poppins', sans-serif !important;
+    text-align: left;
+    /* padding-bottom: 1rem; */
+  }
+
+  /* .form-group {
     font-family: 'Times New Roman', serif;
-  }
+  } */
 
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500&display=swap');
+
+*, html {
+  font-family: 'Poppins', sans-serif !important;
+}
   .login-container {
     background: #FFFFFF;
-    padding: 2rem;
-    border-radius: 8px;
+    padding: 4rem;
+    
+    border-radius: 24px;
     width: 100%;
     max-width: 500px;
-    box-shadow: 0px 8px 16px 0px rgba(41, 7, 7, 0.2);
+    box-shadow: 0px 12px 20px 4px rgba(41, 7, 7, 0.2);
+
   }
   
   .register-container {
     background: #FFFFFF;
     padding: 2rem;
-    border-radius: 8px;
+    border-radius: 24px;
     width: 100%;
     max-width: 500px;
-    box-shadow: 0px 8px 16px 0px rgba(41, 7, 7, 0.2);
+    box-shadow: 0px 12px 20px 4px rgba(41, 7, 7, 0.2);
+
   }
+
+
   
   .form-control {
-    width: 100%;
-    padding: 12px;
-    margin: 8px 0;
-    box-sizing: border-box;
-  }
+    width: 150px; /* Set the width to your desired size */
+    height: 45px; /* Set the height to your desired size */
+    padding: 5px; /* Adjust the padding for spacing inside the input */
+    font-size: 14px; /* Adjust the font size */
+    border: 1px solid #ccc; /* Add a border if needed */
+    border-radius: 5px; /* Add border radius if needed */
+}
+
+.form-control1 {
+  width: 400px; /* Set the width to your desired size */
+  height: 45px; /* Set the height to your desired size */
+  padding: 5px; /* Adjust the padding for spacing inside the input */
+  font-size: 14px; /* Adjust the font size */
+  border: 1px solid #ccc; /* Add a border if needed */
+  border-radius: 5px; /* Add border radius if needed */
+}
   
   .form-label {
     margin-left: 0.5rem;
@@ -100,13 +136,14 @@
     font-size: 16px;
     padding: 12px;
     width: 100%;
+    border-radius: 12px;
   }
   
   .form-label {
     position: absolute;
     left: 12px;
-    top: 14px;
-    font-size: 16px;
+    top: 0px;
+    font-size: 14px;
     color: #777;
     transition: 0.2s;
     pointer-events: none;
@@ -116,7 +153,7 @@
   .form-control:valid + .form-label {
     top: -25px;
     left: 8px;
-    font-size: 15px;
+    font-size: 13px;
     color: #352F44;
   }
 
@@ -147,6 +184,17 @@
     font-size: 12px;
     color: #007bff;
   }
+
+  .card-body-custom {
+    min-height: 220px;  /* You can adjust this value */
+  }
+
+  .abcd {
+    display: inline-flex;
+    margin-right: 10px; /* Adjust as needed */
+  }
+  
+  
 
   
   

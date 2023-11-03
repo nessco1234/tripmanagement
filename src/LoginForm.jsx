@@ -78,7 +78,8 @@ const LoginForm = () => {
       {error && <div className="error-popup">{error}</div>}
       <div className="container">
         <div className="login-container">
-          <h1 className='heading'>Login</h1>
+        <h1 className='heading'>Login</h1>
+
           <form>
             <div className="form-group">
               <input 
@@ -103,26 +104,27 @@ const LoginForm = () => {
               <label htmlFor="password" className="form-label">Password</label>
             </div>
             <div className="row mb-4">
-              <div className="col d-flex justify-content-center">
-                <div className="form-check">
-                  <input 
-                    className="form-check-input" 
-                    type="checkbox" 
-                    id="form2Example31" 
-                    defaultChecked 
-                  />
-                  <label className="form-check-label" htmlFor="form2Example31">Remember me</label>
-                </div>
-              </div>
-              <div className="col">
-                <a href="#!">ForgetPassword</a>
+            <div className="col d-flex justify-content-start">  {/* Aligned to start */}
+              <div className="form-check">
+                <input 
+                  className="form-check-input" 
+                  type="checkbox" 
+                  id="form2Example31" 
+                  defaultChecked 
+                />
+                <label className="form-check-label small-text" htmlFor="form2Example31">Remember me</label>
               </div>
             </div>
+            <div className="col d-flex justify-content-end">  {/* Aligned to end */}
+              <a className="small-text" href=" " onClick={() => navigate('/forget-password')}>Forget Password</a>
+            </div>
+          </div>
+
             <div class="text-center">
-            <button type="button" className="btn btn-primary btn-block mb-4" onClick={handleLogin}>Sign in</button>
+            <button type="button" className="btn btn-primary btn-block mb-4" onClick={handleLogin} >Sign in</button>
             </div>
             <div className="text-center">
-            <p>Not a member? <a href="#!" onClick={() => navigate('/registerForm')}>Register</a></p>
+            <p className="small-text">Not a member? <a href=" " onClick={() => navigate('/registerForm')}>Register</a></p>
           </div>
 
           </form>

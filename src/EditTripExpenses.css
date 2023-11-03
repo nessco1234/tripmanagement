@@ -1,0 +1,83 @@
+EditTripExpenses.css
+
+/* Center the entire container-edit */
+.container-edit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  
+  /* Style the title */
+  .card-title-edit {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  /* Style the form-row-edit section */
+  .form-row-edit {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+  
+  /* Style form-group-edit col-md-2 elements */
+  .form-group-edit {
+    width: 100%;
+    max-width: 200px;
+    margin: 0.5rem;
+  }
+  
+  .form-group-edit input {
+    width: 100%;
+  }
+  
+  /* Style the align-right section */
+  .align-right {
+    text-align: right;
+  }
+  
+  /* Style the button group for sections */
+  .btn-group1-edit {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .toggle-btn-edit {
+    margin: 0.5rem;
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+  }
+  
+  /* Style the currently active button */
+  .active {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  /* Style other buttons */
+  .toggle-btn-edit {
+    background-color: #fff;
+    border: 1px solid #333;
+    color: #333;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .toggle-btn-edit:hover {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  /* Hide sections with 'display: none' */
+  .section {
+    display: none;
+  }
+  
+  /* Add styles for other sections as needed */
+  /* .start-part, .expenses-part, .exchange-part, .total-part, .remarks-part, .end-part */
+  

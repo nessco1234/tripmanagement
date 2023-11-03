@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import './LoginForm.css';
+import axios from 'axios';
+import './RegisterForm.css';
 import { useNavigate } from 'react-router-dom';
 
 const RegisterForm = () => {
@@ -9,35 +10,60 @@ const RegisterForm = () => {
   const [error, setError] = useState(null);
   const navigate = useNavigate();
 
-  const handleRegister = async () => {
-    try {
-      const response = await fetch('http://localhost:8000/api/register/', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ username, email, password }),
-      });
+  const validateEmail = (email) => {
+    // Your email validation logic here
+    return email.includes("@");
+  };
 
-      const data = await response.json();
+  const validatePassword = (password) => {
+    // Your password validation logic here
+    return password.length >= 8;
+  };
+
+  const handleRegister = async () => {
+    if (!validateEmail(email) || !validatePassword(password)) {
+      setError('Invalid email or password');
+      return;
+    }
+  
+    try {
+      const response = await axios.post('http://localhost:8000/api/register/', { username, email, password });
+      const data = response.data;
+  
       if (data.status === 'success') {
         navigate('/login');  // Navigate to login page
       } else {
-        setError(data.message);
+        setError(data.message || 'Something went wrong');
       }
     } catch (error) {
-      setError('Something went wrong');
+      console.error("Error:", error);
+  
+      if (error.response) {
+        if (error.response.status === 400) {
+          setError('Bad request. Please check the form fields.');
+        } else if (error.response.status === 405) {
+          setError('Method not allowed. Please check the API endpoint.');
+        } else {
+          setError(`An error occurred: ${error.response.statusText}`);
+        }
+      } else if (error.request) {
+        setError('No response received. Please check the server.');
+      } else {
+        setError(`An error occurred: ${error.message}`);
+      }
     }
   };
+  
+  
 
   return (
     <div className="abc">
       {error && <div className="error-popup">{error}</div>}
       <div className="container">
         <div className="register-container">
-          <h1 className='heading'>Register</h1>
+          <h1 className='heading' style={{ fontSize: '35px', textAlign: 'center', paddingBottom: '1rem' }}>Register</h1>
           <form>
-            <div className="form-group">
+          <div className="form-group">
               <input 
                 type="text" 
                 id="username" 
@@ -70,13 +96,12 @@ const RegisterForm = () => {
               />
               <label htmlFor="password" className="form-label">Password</label>
             </div>
-            <div className="text-center">
+            <div className="text-center" style={{ fontSize: '40px', textAlign: 'center', paddingBottom: '1rem' , paddingTop: '1rem'}} >
               <button type="button" className="btn btn-primary btn-block mb-4" onClick={handleRegister}>Register</button>
             </div>
-
             <div className="text-center">
-            <p>Already a member? <a href="#!" onClick={() => navigate('/')}>Login</a></p>
-          </div>
+              <p className="small-text">Already a member? <a href=" " onClick={() => navigate('/')}>Login</a></p>
+            </div>
           </form>
         </div>
       </div>
