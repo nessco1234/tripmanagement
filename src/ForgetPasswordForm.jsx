@@ -45,11 +45,9 @@ const ForgetPasswordForm = () => {
             />
             <label htmlFor="email" className="form-label">Email</label>
           </div>
-          <div className="text-center">
-            <button type="button" className="btn-primary" onClick={handleForgetPassword}>
-              Reset Password
-            </button>
-          </div>
+          <div class="text-center">
+            <button type="button" className="btn btn-primary btn-block mb-4" onClick={handleForgetPassword} >Forget Password</button>
+           </div>
         </form>
       </div>
     </div>

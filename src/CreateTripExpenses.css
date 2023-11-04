@@ -1,4 +1,4 @@
-.container-full-bg {
+ .container-full-bg {
     position: relative;
   }
   
@@ -118,6 +118,10 @@
   overflow-y: auto; /* Allows vertical scrolling */
 }
 
+.createtripcontainer{
+  min-height: 100vh; /* Sets the minimum height to full viewport height */
+  overflow-y: auto; /* Enables vertical scrolling if content overflows */
+}
 
 
   

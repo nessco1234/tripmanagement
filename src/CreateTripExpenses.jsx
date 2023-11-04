@@ -15,6 +15,8 @@ const CreateTripExpenses = () => {
   );
   const [dateTimeType, setDateTimeType] = useState("automatic");
   const [manualDateTime, setManualDateTime] = useState("");
+  const [location, setLocation] = useState("");
+  const [isLocationAutomatic, setIsLocationAutomatic] = useState(true);
 
   const navigate = useNavigate();
 
@@ -93,11 +95,28 @@ const CreateTripExpenses = () => {
     setEmployees(newEmployees);
   };
 
+  const fetchLocation = () => {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        (position) => {
+          setLocation(
+            `${position.coords.latitude}, ${position.coords.longitude}`
+          );
+        },
+        () => {
+          alert("Unable to retrieve your location");
+        }
+      );
+    } else {
+      alert("Geolocation is not supported by this browser.");
+    }
+  };
+
   return (
     <div className="container-full-bg">
       <div className="overlay-form">
         {error && <div className="error">{error}</div>}
-        <div className="form-section">
+        <div className="form-section createtripcontainer">
           <h1 className="text-center">Create Start</h1>
           <form onSubmit={handleSubmit}>
             <div className="form-group">
@@ -257,12 +276,62 @@ const CreateTripExpenses = () => {
                 />
               )}
             </div>
+            <div className="form-group d-flex align-items-center justify-content-between">
+              <h6>Date and Time & Location</h6>
+              <div className="form-check form-check-inline">
+                <input
+                  className="form-check-input"
+                  type="radio"
+                  name="dateTimeLocationType"
+                  id="automatic"
+                  value="automatic"
+                  checked={isLocationAutomatic}
+                  onChange={() => {
+                    setIsLocationAutomatic(true);
+                    fetchLocation();
+                  }}
+                />
+                <label className="form-check-label" htmlFor="automatic">
+                  Automatically Fetch
+                </label>
+              </div>
 
-            <div className="text-center">
-              <button type="button" className="btn-primary">
-                Start Trip
-              </button>
+              <div className="form-check form-check-inline">
+                <input
+                  className="form-check-input"
+                  type="radio"
+                  name="dateTimeLocationType"
+                  id="manual"
+                  value="manual"
+                  checked={!isLocationAutomatic}
+                  onChange={() => setIsLocationAutomatic(false)}
+                />
+                <label className="form-check-label" htmlFor="manual">
+                  Manually Set
+                </label>
+              </div>
+
+              {isLocationAutomatic ? (
+                <input
+                  type="text"
+                  className="form-control form-control-sm"
+                  value={location}
+                  readOnly
+                />
+              ) : (
+                <input
+                  type="text"
+                  className="form-control form-control-sm"
+                  placeholder="Enter location"
+                  value={location}
+                  onChange={(e) => setLocation(e.target.value)}
+                />
+              )}
             </div>
+
+            <div class="text-center">
+            <button type="button" className="btn btn-primary btn-block mb-4">Start Trip</button>
+           </div>
           </form>
         </div>
       </div>
