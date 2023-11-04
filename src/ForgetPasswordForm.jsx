@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import './ForgetPasswordForm.css';
 
 const ForgetPasswordForm = () => {
   const [email, setEmail] = useState("");
@@ -29,9 +30,10 @@ const ForgetPasswordForm = () => {
   };
 
   return (
+    <div className="abc">
     <div className="container">
       {error && <div className="error-popup">{error}</div>}
-      <div className="login-container"> {/* Assuming login-container has the styles you want */}
+      <div className="forget-password-container"> {/* Assuming login-container has the styles you want */}
       <h1 className='heading' style={{ fontSize: '24.97px', textAlign: 'center', paddingBottom: '1rem' }}>Forget Password</h1>
         <form>
           <div className="form-group">
@@ -50,6 +52,7 @@ const ForgetPasswordForm = () => {
            </div>
         </form>
       </div>
+    </div>
     </div>
   );
 };
