@@ -1,0 +1,27 @@
+.layout-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+  }
+  
+  .containerleft,
+  .containerright,
+  .containermiddle {
+    text-align: center;
+    flex: 1;
+  }
+  
+  .containermiddle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  @media (max-width: 768px) {
+    .layout-container {
+      flex-direction: column; /* Stack containers vertically on small screens */
+    }
+  }
+  
+  
