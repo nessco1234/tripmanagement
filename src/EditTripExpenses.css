@@ -73,11 +73,11 @@
   }
   
   /* Style the currently active button */
-  .active {
+  /* .active {
     background-color: #333;
     color: #fff;
   }
-  
+   */
   /* Style other buttons */
   .toggle-btn-edit {
     background-color: #fff;
@@ -105,7 +105,7 @@
   
 
   .heading-edit {
-    font-size: 30px;
+    font-size: 40px;
     color: #080808;
     margin-bottom: 2rem;
     font-family: 'Poppins', sans-serif !important;
@@ -203,5 +203,51 @@
     align-items: center;
     justify-content: flex-start;
   }
-   */
+   */.tab-button {
+  color: #61677C;
+  font-weight: bold;
+  box-shadow: inset -5px -5px 10px white, inset 5px 5px 10px #cbced1;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  font-weight: 600;
+
+  &:hover {
+    box-shadow: inset -2px -2px 5px white, inset 2px 2px 5px #cbced1;
+  }
+
+  &:active {
+    box-shadow: none !important;
+    background-color: #333; /* Dark background color */
+    color: #fff; /* White text color */
+  }
+}
+
+.add-button {
+  color:#61677C;
+  font-weight: bold;
+  box-shadow: -5px -5px 20px white,  5px 5px 20px #cbced1;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  font-weight: 600;
   
+  &:hover {
+    box-shadow: -2px -2px 5px white, 2px 2px 5px #cbced1;
+  }
+  
+  &:active {
+    box-shadow: inset 1px 1px 2px #cbced1, inset -1px -1px 2px white;
+  }
+  
+  
+}  
+  
+.add-button {
+  border: 0;
+  outline: 0;
+  font-size: 16px; /* Replace with your desired font size */
+  border-radius: 20px; /* Replace with your desired border radius */
+  padding: 16px; /* Replace with your desired padding */
+  background-color: #f0f0f0; /* Replace with your desired background color */
+  text-shadow: 1px 1px 0 #fff; /* Replace with your desired text shadow color */
+  color: #000 !important; /* Replace with your desired text color */
+}

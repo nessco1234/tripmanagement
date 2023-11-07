@@ -2,48 +2,154 @@
 
 /* Tab buttons */
 .tab-button {
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
+  padding: 10px 80px;
+  border: 1px solid #E0E0E0;
+  border-radius: 20px;
+  cursor: pointer;
+  background-color: #F4F4F4;
+  color: #333;
+  display: block;
+  margin: 5px 0; /* Add spacing between tabs */
+
+  /* Add responsive styles */
+  @media (max-width: 1111px) {
+    padding: 8px 16px;
+    margin: 3px 0; /* Reduce spacing on smaller screens */
   }
-  
+}
+
+/* Active tab button styles */
+.tab-button.active {
+  background-color: #664DE5;
+  color: #FFFFFF;
+  border-bottom-left-radius: 0; /* Remove bottom-left border radius */
+  border-bottom-right-radius: 0; /* Remove bottom-right border radius */
+}
+
+/* Tab content */
+.tab-content {
+  background-color: #f9f9f9;
+  padding: 16px;
+  border: 1px solid #ddd;
+  border-top: none;
+  border-radius: 0 0 6px 6px; /* Adding rounded corners to the bottom */
+  display: none; /* Hide content by default */
+}
+
+.tab-content.active {
+  display: block;
+  position: relative;
+  width: 100%;
+  border-radius: 20px;
+  padding: 40px;
+  box-sizing: border-box;
+  background: #ecf0f3;
+  box-shadow: inset 2px 2px 5px #cbced1, inset -5px -5px 10px white;
+  color: black; /* Add this line to set the text color to black */
+}
+
+
+
+/* Responsive adjustments */
+@media (max-width: 1111px) {
+  .tab-button,
+  .tab-button.active {
+    width: 100%; /* Make buttons full-width on smaller screens */
+  }
+
+
+  .tab-button.active {
+    border-radius: 20px 20px 0 0; /* Adjust the border-radius for the active tab */
+  }
+  .flex-tab {
+    display: flex;
+    align-content: stretch;
+    justify-content: flex-end;
+    flex-wrap: nowrap;
+    flex-direction: column;
+  }
+}
+
+.flex-tab{
+  display: flex;
+}
+.mobile-container {
+  /* Set the minimum height for the mobile container */
+  min-height: 500px; /* Adjust the height as needed */
+}
 /* styles.css */
+.active-now {
+  background-color: #fff;
+  color: #fff;
+}
 
-/* Tab buttons */
-.tab-button {
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-  }
-  
-  /* styles.css */
+/* Modal Container */
+.react-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-/* Active tab button styles */
-.tab-button.active {
-    background-color: #007BFF; /* Change to the color you prefer */
-    color: #FFFFFF; /* Text color for active tab */
-  }
-  
-  /* Tab content */
-  .tab-content {
-    display: none;
-  }
-  
-  .tab-content.active {
-    display: block;
-  }
-  
-  
-  /* Tab content */
-  .tab-content {
-    display: none;
-  }
-  
- /* styles.css */
+/* Modal Content */
+.modal-content {
+  background-color: #fff; /* Background color for the modal content */
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  width: 400px; /* Adjust the width as needed */
+}
 
-/* Active tab button styles */
-.tab-button.active {
-    background-color: #007BFF; /* Change to the color you prefer */
-    color: #FFFFFF; /* Text color for active tab */
-  }
-  
+/* Add Row Heading */
+.modal-content h2 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+/* Input Fields */
+.modal-content input {
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 8px;
+  margin-bottom: 10px;
+}
+
+/* Save Button */
+.modal-content .save-button {
+  background-color: #007bff;
+  color: #fff;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Cancel Button */
+.modal-content .cancel-button {
+  background-color: #ccc;
+  color: #fff;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+/* Close Button */
+.modal-content .close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  color: #777;
+  cursor: pointer;
+}

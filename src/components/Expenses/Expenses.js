@@ -1,5 +1,9 @@
 import React, { useState } from 'react';
 import './Expenses.css'; // Import your CSS file
+import FoodExpenses from './FoodExpenses/FoodExpenses';
+import HotelExpenses from './HotelExpenses/HotelExpenses';
+import OtherExpenses from './OtherExpenses/OtherExpenses';
+import TravelExpenses from './TravelExpenses/TravelExpenses';
 
 function Expenses() {
   const [activeTab, setActiveTab] = useState('Food Expenses');
@@ -12,7 +16,7 @@ function Expenses() {
     <div>
       <h1 className="text-2xl font-semibold mb-4 heading-edit">Expenses</h1>
 
-      <div className="flex space-x-4">
+      <div className="flex-tab flex-col sm:flex-row space-y-2 sm:space-y-0">
         <button
           className={`tab-button ${activeTab === 'Food Expenses' ? 'active' : ''}`}
           onClick={() => handleTabClick('Food Expenses')}
@@ -43,17 +47,30 @@ function Expenses() {
       </div>
 
       <div className={`tab-content ${activeTab === 'Food Expenses' ? 'active' : ''}`}>
-        Content for Food Expenses
-      </div>
-      <div className={`tab-content ${activeTab === 'Hotel Expenses' ? 'active' : ''}`}>
-        Content for Hotel Expenses
-      </div>
-      <div className={`tab-content ${activeTab === 'Other Expenses' ? 'active' : ''}`}>
-        Content for Other Expenses
-      </div>
-      <div className={`tab-content ${activeTab === 'Travel Expenses' ? 'active' : ''}`}>
-        Content for Travel Expenses
-      </div>
+  <div className="p-4">
+    <h2 className="text-lg font-semibold mb-2">Food Expenses</h2>
+    <FoodExpenses />
+  </div>
+</div>
+<div className={`tab-content ${activeTab === 'Hotel Expenses' ? 'active' : ''}`}>
+  <div className="p-4">
+    <h2 className="text-lg font-semibold mb-2">Hotel Expenses</h2>
+    <HotelExpenses />
+  </div>
+</div>
+<div className={`tab-content ${activeTab === 'Other Expenses' ? 'active' : ''}`}>
+  <div className="p-4">
+    <h2 className="text-lg font-semibold mb-2">Other Expenses</h2>
+    <OtherExpenses />
+  </div>
+</div>
+<div className={`tab-content ${activeTab === 'Travel Expenses' ? 'active' : ''}`}>
+  <div className="p-4">
+    <h2 className="text-lg font-semibold mb-2">Travel Expenses</h2>
+    <TravelExpenses />
+  </div>
+</div>
+
     </div>
   );
 }
