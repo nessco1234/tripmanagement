@@ -214,7 +214,7 @@ function FoodExpenses() {
 	)}
 
  
-<div className="tab-content">
+{/* <div className="tab-content">
   <table>
     <thead>
       <tr>
@@ -235,7 +235,7 @@ function FoodExpenses() {
       ))}
     </tbody>
   </table>
-</div>
+</div> */}
 
 
 
