@@ -126,83 +126,7 @@
 }
 
 
-  /* button, input {
-    border: 0;
-    outline: 0;
-    font-size: 16px;
-    border-radius: 320px;
-    padding: 16px;
-    background-color: #ecf0f3;
-    text-shadow: 1px 1px 0 #fff;
-  }
-  
-  label {
-    display: block;
-    margin-bottom: 24px;
-    width: 100%;
-  }
-  
-  input {
-    margin-right: 8px;
-    box-shadow: inset 2px 2px 5px #dcdde1, inset -5px -5px 10px #fff;
-    width: 100%;
-    box-sizing: border-box;
-    transition: all 0.2s ease-in-out;
-    appearance: none;
-    -webkit-appearance: none;
-  }
-  
-  input:focus {
-    box-shadow: inset 1px 1px 2px #dcdde1, inset -1px -1px 2px #fff;
-  }
-  
-  button {
-    color: #61677C;
-    font-weight: bold;
-    box-shadow: -5px -5px 20px #fff, 5px 5px 20px #dcdde1;
-    transition: all 0.2s ease-in-out;
-    cursor: pointer;
-    font-weight: 600;
-  }
-  
-  button:hover {
-    box-shadow: -2px -2px 5px #fff, 2px 2px 5px #dcdde1;
-  }
-  
-  button:active {
-    box-shadow: inset 1px 1px 2px #dcdde1, inset -1px -1px 2px #fff;
-  }
-  
-  .button .icon {
-    margin-right: 8px;
-  }
-  
-  .button.unit {
-    border-radius: 8px;
-    line-height: 0;
-    width: 48px;
-    height: 48px;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 8px;
-    font-size: 19.2px;
-    .button .icon {
-      margin-right: 0;
-    }
-  }
-  
-  .button.red {
-    display: block;
-    width: 100%;
-    color: #ff0000;
-  }
-  
-  .input-group {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-  }
+
    */.tab-button {
   color: #61677C;
   font-weight: bold;
@@ -240,7 +164,38 @@
   
   
 }  
+
+.add-button-purple {
+  color:#61677C;
+  font-weight: bold;
+  box-shadow: -5px -5px 20px white,  5px 5px 20px #cbced1;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  font-weight: 600;
   
+  &:hover {
+    box-shadow: -2px -2px 5px white, 2px 2px 5px #cbced1;
+  }
+  
+  &:active {
+    box-shadow: inset 1px 1px 2px #cbced1, inset -1px -1px 2px white;
+  }
+  
+  
+}
+.close-button {
+  border: 0;
+  outline: 0;
+  font-size: 16px; /* Replace with your desired font size */
+  border-radius: 20px; /* Replace with your desired border radius */
+  padding: 16px; /* Replace with your desired padding */
+  background-color: #f0f0f0; /* Replace with your desired background color */
+  text-shadow: 1px 1px 0 #fff; /* Replace with your desired text shadow color */
+  color: #000 !important; /* Replace with your desired text color */
+  position: absolute; /* Set the button to absolute positioning */
+  top: 0; /* Position it at the top */
+  right: 0; /* Position it at the right */
+}
 .add-button {
   border: 0;
   outline: 0;
@@ -251,3 +206,90 @@
   text-shadow: 1px 1px 0 #fff; /* Replace with your desired text shadow color */
   color: #000 !important; /* Replace with your desired text color */
 }
+
+.add-button-purple {
+  border: 0;
+  outline: 0;
+  font-size: 16px; /* Replace with your desired font size */
+  border-radius: 20px; /* Replace with your desired border radius */
+  padding: 16px; /* Replace with your desired padding */
+  background-color: #f0f0f0; /* Replace with your desired background color */
+  text-shadow: 1px 1px 0 #fff; /* Replace with your desired text shadow color */
+  color: #664DE5 !important; /* Replace with your desired text color */
+}
+
+.container-expenses-outer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container-expenses {
+  position: relative;
+  width: 60vw;
+  border-radius: 20px;
+  padding: 40px;
+  box-sizing: border-box;
+  background: rgba(236, 240, 243, 0.95); /* Slightly transparent background */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2), 0 0 30px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  gap: 16px;
+  overflow: auto;
+
+}
+
+@media (max-width: 768px) {
+  .container-expenses {
+    flex-direction: column; /* Stack form fields vertically on smaller screens */
+  }
+
+  .container-expenses input,
+  .container-expenses select {
+    width: 100%; /* Make form fields take full width on smaller screens */
+  }
+}
+
+
+.abc1 {
+  background-color: rgba(238, 238, 238, 0.4); /* Semi-transparent background color */
+  backdrop-filter: blur(10px); /* Apply a blur effect */
+}
+
+
+/* CSS */
+.modal-reveal {
+  opacity: 1;
+  transform: translateY(0);
+  animation: fadeInAndSlide 0.5s ease-in;
+}
+
+.modal-hidden {
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeOutAndSlide 0.5s ease-out;
+}
+
+@keyframes fadeInAndSlide {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeOutAndSlide {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+}
+
