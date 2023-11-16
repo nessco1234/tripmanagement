@@ -293,3 +293,53 @@
   }
 }
 
+
+/* .tab-content {
+  height: 300px; 
+  overflow: auto; 
+} */
+
+.table-container {
+  max-height: 100px; /* Set the maximum height you want */
+  overflow-y: auto;
+  overflow-x: auto;
+}
+
+.styled-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px; /* Add margin for better spacing */
+}
+
+.styled-table th,
+.styled-table td {
+  padding: 12px;
+  text-align: left;
+  border: 1px solid #ddd; /* Add border for better visibility */
+}
+
+.styled-table th {
+  background-color: #f2f2f2; /* Light background for header */
+}
+
+@media screen and (min-width: 768px) {
+  .styled-table th,
+  .styled-table td {
+    padding: 10px;
+  }
+}
+
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.small-button {
+  padding: 8px 12px; /* Adjust the padding to change the button size */
+  font-size: 14px; /* Adjust the font size as needed */
+}
+
+
+

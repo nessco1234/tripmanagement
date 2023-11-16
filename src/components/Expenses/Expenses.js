@@ -48,25 +48,25 @@ function Expenses() {
 
       <div className={`tab-content ${activeTab === 'Food Expenses' ? 'active' : ''}`}>
   <div className="p-4">
-    <h2 className="text-lg font-semibold mb-2">Food Expenses</h2>
+    {/* <h2 className="text-lg font-semibold mb-2">Food Expenses</h2> */}
     <FoodExpenses />
   </div>
 </div>
 <div className={`tab-content ${activeTab === 'Hotel Expenses' ? 'active' : ''}`}>
   <div className="p-4">
-    <h2 className="text-lg font-semibold mb-2">Hotel Expenses</h2>
+    {/* <h2 className="text-lg font-semibold mb-2">Hotel Expenses</h2> */}
     <HotelExpenses />
   </div>
 </div>
 <div className={`tab-content ${activeTab === 'Other Expenses' ? 'active' : ''}`}>
   <div className="p-4">
-    <h2 className="text-lg font-semibold mb-2">Other Expenses</h2>
+    {/* <h2 className="text-lg font-semibold mb-2">Other Expenses</h2> */}
     <OtherExpenses />
   </div>
 </div>
 <div className={`tab-content ${activeTab === 'Travel Expenses' ? 'active' : ''}`}>
   <div className="p-4">
-    <h2 className="text-lg font-semibold mb-2">Travel Expenses</h2>
+    {/* <h2 className="text-lg font-semibold mb-2">Travel Expenses</h2> */}
     <TravelExpenses />
   </div>
 </div>
