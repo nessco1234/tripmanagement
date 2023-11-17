@@ -6,6 +6,7 @@ function StartTrip() {
   const [locationPermission, setLocationPermission] = useState(false);
   const [manualReason, setManualReason] = useState('');
   const [otherReason, setOtherReason] = useState('');
+  
 
   const fetchDateTime = () => {
     if ('geolocation' in navigator) {
@@ -26,6 +27,11 @@ function StartTrip() {
   return (
     <div className="p-4 rounded-md shadow-md">
       <h1 className="text-2xl font-semibold mb-4 heading-edit">Start Trip</h1>
+
+      
+
+      
+    
 
       <div className="layout-container">
         <div className="containerleft">

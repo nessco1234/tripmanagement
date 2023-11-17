@@ -7,6 +7,21 @@
   width: 100vw;
 }
 
+.container-edit-outer-other {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30vh;
+  width: 100vw;
+}
+
+.top-inputs-container {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  /* text-align: center; */
+}
+
 .container-edit {
   position: relative;
   width: 90%;
@@ -18,6 +33,17 @@
   /* Add an important flag to increase specificity */
 }
 
+.container-edit-other {
+  position: relative;
+  width: 90%;
+  border-radius: 20px;
+  padding: 40px;
+  box-sizing: border-box;
+  background: #ecf0f3;
+  box-shadow: 14px 14px 20px #cbced1, -14px -14px 20px white;
+}
+
+
 /* Adjust the max-width for larger screens if needed */
 @media (min-width: 768px) {
   .container-edit {
@@ -26,6 +52,12 @@
   }
 }
 
+/* Media Query for Mobile View */
+@media screen and (max-width: 480px) {
+  .top-inputs-container {
+    flex-direction: column; /* Stack inputs on top of each other */
+  }
+}
 
   
   /* Style the title */
