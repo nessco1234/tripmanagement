@@ -132,7 +132,7 @@ function OtherExpenses() {
                             onChange={handleInputChange}
                             className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
                           >
-                            <option value="" disabled>--Select--</option>
+                            <option value="" disabled selected>--Select--</option>
                             <option value="HEALTH PROBLEM EXPENSES">HEALTH PROBLEM EXPENSES</option>
                             <option value="OPERATOR TREAT">OPERATOR TREAT</option>
                             <option value="CUSTOMER TREAT">CUSTOMER TREAT</option>
@@ -160,7 +160,7 @@ function OtherExpenses() {
                             onChange={handleInputChange}
                             className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
                           >
-                            <option value="" disabled>--Select--</option>
+                            <option value="" disabled selected>--Select--</option>
                             {currencies.map((currency) => (
                               <option key={currency.code} value={currency.code}>
                                 {currency.name} ({currency.code})

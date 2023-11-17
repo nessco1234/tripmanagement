@@ -132,7 +132,7 @@ function TravelExpenses() {
                             onChange={handleInputChange}
                             className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
                           >
-                            <option value="" disabled>--Select--</option>
+                            <option value=""  disabled selected>--Select--</option>
                             <option value="COUNTRY TO COUNTRY">COUNTRY TO COUNTRY</option>
                             <option value="CITY TO CITY">CITY TO CITY</option>
                             <option value="INSIDE CITY">INSIDE CITY</option>
@@ -154,7 +154,7 @@ function TravelExpenses() {
                             onChange={handleInputChange}
                             className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
                           >
-                            <option value="" disabled>--Select--</option>
+                            <option value="" disabled selected>--Select--</option>
                             <option value="TRAIN">TRAIN</option>
                             <option value="FLIGHT">FLIGHT</option>
                             <option value="BUS">BUS</option>
@@ -225,7 +225,7 @@ function TravelExpenses() {
                             onChange={handleInputChange}
                             className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
                           >
-                            <option value="" disabled>--Select--</option>
+                            <option value="" disabled selected>--Select--</option>
                             {currencies.map((currency) => (
                               <option key={currency.code} value={currency.code}>
                                 {currency.name} ({currency.code})
