@@ -96,7 +96,7 @@ const RegisterForm = () => {
               />
               <label htmlFor="password" className="form-label">Password</label>
             </div>
-            <div className="text-center" style={{ fontSize: '40px', textAlign: 'center', paddingBottom: '1rem' , paddingTop: '1rem'}} >
+            <div className="text-center">
               <button type="button" className="btn btn-primary btn-block mb-4" onClick={handleRegister}>Register</button>
             </div>
             <div className="text-center">
