@@ -30,6 +30,8 @@ function StartTrip() {
       <div className="layout-container">
         <div className="containerleft">
           <div className="w-full p-4">
+          <div className="my-2">
+          <label className="block text-sm font-semibold mb-1">Automatically fetch Date & Time:</label><br/>
             <input
               className="w-full py-1 px-3 my-2 border border-gray-300 rounded text-sm"
               type="text"
@@ -47,10 +49,11 @@ function StartTrip() {
               <p className="text-green-600">Location permission granted.</p>
             ) : (
               <p className="text-red-600">
-                Location permission not granted. <br/>Please click the button to fetch date & time.
+                Location permission not granted. 
               </p>
             )}
           </div>
+        </div>
         </div>
 
         <div className="containermiddle">
