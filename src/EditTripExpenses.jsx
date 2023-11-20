@@ -6,7 +6,7 @@ import TripRemarks from "./components/TripRemarks/TripRemarks";
 import EndTrip from "./components/EndTrip/EndTrip";
 import './EditTripExpenses.css';
 import React, { useState } from "react";
-import tachyons from "tachyons";
+// import tachyons from "tachyons";
 import MultiStepProgressBar from "./components/MultiStepProgressBar/MultiStepProgressBar";
 
 function EditTripExpenses() {
